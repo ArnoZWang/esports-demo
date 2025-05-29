@@ -1,11 +1,23 @@
-import { Card, CardContent, CardMedia, Typography, Box, Paper } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Box, Paper, Button } from '@mui/material';
 import type { GameHighlight as GameHighlightType } from '../types/esports';
+import { TypingText } from './TypingText';
+import { useState } from 'react';
 
 interface GameHighlightProps {
   highlight: GameHighlightType;
 }
 
 export const GameHighlight = ({ highlight }: GameHighlightProps) => {
+  const [isTyping, setIsTyping] = useState(false);
+
+  const handleGenerate = () => {
+    setIsTyping(true);
+  };
+
+  const handleTypingComplete = () => {
+    setIsTyping(false);
+  };
+
   return (
     <Card sx={{ 
       maxWidth: 1200, 
@@ -68,13 +80,31 @@ export const GameHighlight = ({ highlight }: GameHighlightProps) => {
           backdropFilter: 'blur(10px)',
           borderBottomLeftRadius: { md: '16px' },
           borderBottomRightRadius: { xs: '16px', md: 0 },
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 1,
         }}>
           <Typography variant="body2" sx={{ 
             color: '#fff',
             lineHeight: 1.6,
             fontSize: '0.9rem',
           }}>
-            {`This highlight showcases an intense moment from the ${highlight.gameData.event}. ${highlight.gameData.players[0].name} on ${highlight.gameData.players[0].champion} demonstrates exceptional skill and game sense, making a crucial play that could turn the tide of the match between ${highlight.gameData.teams.team1} and ${highlight.gameData.teams.team2}.`}
+            {highlight.description}
+          </Typography>
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              color: '#00ff9d',
+              filter: 'drop-shadow(0 0 8px rgba(0, 255, 157, 0.3))',
+              animation: 'float 3s ease-in-out infinite',
+              '@keyframes float': {
+                '0%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-5px)' },
+                '100%': { transform: 'translateY(0px)' }
+              }
+            }}
+          >
+            👤
           </Typography>
         </Box>
       </Box>
@@ -135,46 +165,50 @@ export const GameHighlight = ({ highlight }: GameHighlightProps) => {
           </Paper>
 
           <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
-            <Typography 
-              variant="body1" 
-              sx={{ 
-                lineHeight: 1.8,
-                color: '#ccc',
-                fontSize: '1.1rem',
-                '& .highlight-player': {
+            <Box sx={{ flex: 1 }}>
+              <TypingText 
+                text={highlight.commentary} 
+                isTyping={isTyping}
+                onTypingComplete={handleTypingComplete}
+              />
+            </Box>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+              <Button
+                variant="contained"
+                onClick={handleGenerate}
+                disabled={isTyping}
+                sx={{
+                  backgroundColor: 'rgba(0, 255, 157, 0.1)',
                   color: '#00ff9d',
-                  fontWeight: 'bold',
-                },
-                '& .highlight-champion': {
-                  color: '#ff6b6b',
-                  fontWeight: 'bold',
-                },
-                '& .highlight-action': {
-                  color: '#4dabf7',
-                  fontWeight: 'bold',
-                },
-                '& .highlight-objective': {
-                  color: '#ffd43b',
-                  fontWeight: 'bold',
-                }
-              }}
-              dangerouslySetInnerHTML={{ __html: highlight.commentary }}
-            />
-            <Typography 
-              variant="h5" 
-              sx={{ 
-                color: '#00ff9d',
-                filter: 'drop-shadow(0 0 8px rgba(0, 255, 157, 0.3))',
-                animation: 'float 3s ease-in-out infinite',
-                '@keyframes float': {
-                  '0%': { transform: 'translateY(0px)' },
-                  '50%': { transform: 'translateY(-5px)' },
-                  '100%': { transform: 'translateY(0px)' }
-                }
-              }}
-            >
-              🤖
-            </Typography>
+                  border: '1px solid rgba(0, 255, 157, 0.2)',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 255, 157, 0.2)',
+                  },
+                  '&:disabled': {
+                    backgroundColor: 'rgba(0, 255, 157, 0.05)',
+                    color: 'rgba(0, 255, 157, 0.3)',
+                  },
+                  minWidth: '120px',
+                }}
+              >
+                {isTyping ? 'Generating...' : 'GENERATE'}
+              </Button>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  color: '#00ff9d',
+                  filter: 'drop-shadow(0 0 8px rgba(0, 255, 157, 0.3))',
+                  animation: 'float 3s ease-in-out infinite',
+                  '@keyframes float': {
+                    '0%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-5px)' },
+                    '100%': { transform: 'translateY(0px)' }
+                  }
+                }}
+              >
+                🤖
+              </Typography>
+            </Box>
           </Box>
         </CardContent>
       </Box>

@@ -2,6 +2,7 @@ export interface GameHighlight {
   id: string;
   mediaUrl: string;
   mediaType: 'image' | 'gif' | 'video';
+  description: string;
   gameData: {
     matchId: string;
     teams: {

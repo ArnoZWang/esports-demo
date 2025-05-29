@@ -2,34 +2,35 @@
   "highlights": [
     {
       "id": "1",
-      "mediaUrl": "https://example.com/game1.mp4",
+      "mediaUrl": "https://www.youtube.com/embed/Eqt7XOrDiTA?start=1515&amp;end=1525",
       "mediaType": "video",
+      "description": "This highlight showcases an intense moment from the LCS Spring Split 2024. Impact on Ornn demonstrates exceptional skill and game sense, making a crucial play that could turn the tide of the match between FPX and iG.",
       "gameData": {
-        "matchId": "LCS-2024-SPRING-1",
+        "matchId": "S9-Semifinal-Game-4",
         "teams": {
-          "team1": "Team Liquid",
-          "team2": "Cloud9"
+          "team1": "FPX",
+          "team2": "iG"
         },
-        "event": "LCS Spring Split 2024",
-        "players": [
-          {
-            "name": "Impact",
-            "champion": "Ornn",
-            "role": "Top"
-          },
-          {
-            "name": "Blaber",
-            "champion": "Lee Sin",
-            "role": "Jungle"
-          }
-        ]
+        "type": "BUILDING_KILL", 
+        "timestamp": 839426, 
+        "position": {
+          "x": 4318,
+          "y": 13875
+        },
+        "killerId": 4,
+        "assistingParticipantIds": "",
+        "teamId": 200,
+        "buildingType": "TOWERBUILDING", 
+        "laneType": "TOPLANE",
+        "towerType": "OUTERTURRET"
       },
-      "commentary": "In an intense <span class='highlight-action'>teamfight</span> at the <span class='highlight-objective'>Baron pit</span>, Team Liquid's <span class='highlight-player'>Impact</span> lands a perfect <span class='highlight-champion'>Ornn</span> ultimate, catching three members of Cloud9. The follow-up engage from <span class='highlight-player'>Blaber</span>'s <span class='highlight-champion'>Lee Sin</span> secures the <span class='highlight-action'>ace</span> and the <span class='highlight-objective'>Baron</span>, turning the game in Team Liquid's favor."
+      "commentary": "… IG's <span class='highlight-player'>JackeyLove</span> <span class='highlight-action'>pressures</span> the top lane alone and takes down FPX’s outer turret, marking a <span class='highlight-action'>BUILDINGKILL</span> event in the <span class='highlight-objective'>TOPLANE</span>--a small but crucial step toward regaining map control despite IG trailing 5-12 in kills and over 3k gold."
     },
     {
       "id": "2",
       "mediaUrl": "https://example.com/game2.gif",
       "mediaType": "image",
+      "description": "This highlight showcases an intense moment from the LEC Winter Split 2024. Caps on LeBlanc demonstrates exceptional skill and game sense, making a crucial play that could turn the tide of the match between G2 Esports and Fnatic.",
       "gameData": {
         "matchId": "LEC-2024-WINTER-2",
         "teams": {

@@ -89,7 +89,7 @@ function App() {
           }}>
             🎮
           </span>
-          League of Legends Esports Highlights
+          LoL Esports Commentary Generation
         </h1>
         <style>
           {`
