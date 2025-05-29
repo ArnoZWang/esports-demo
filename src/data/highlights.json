@@ -1,0 +1,56 @@
+{
+  "highlights": [
+    {
+      "id": "1",
+      "mediaUrl": "https://example.com/game1.mp4",
+      "mediaType": "video",
+      "gameData": {
+        "matchId": "LCS-2024-SPRING-1",
+        "teams": {
+          "team1": "Team Liquid",
+          "team2": "Cloud9"
+        },
+        "event": "LCS Spring Split 2024",
+        "players": [
+          {
+            "name": "Impact",
+            "champion": "Ornn",
+            "role": "Top"
+          },
+          {
+            "name": "Blaber",
+            "champion": "Lee Sin",
+            "role": "Jungle"
+          }
+        ]
+      },
+      "commentary": "In an intense <span class='highlight-action'>teamfight</span> at the <span class='highlight-objective'>Baron pit</span>, Team Liquid's <span class='highlight-player'>Impact</span> lands a perfect <span class='highlight-champion'>Ornn</span> ultimate, catching three members of Cloud9. The follow-up engage from <span class='highlight-player'>Blaber</span>'s <span class='highlight-champion'>Lee Sin</span> secures the <span class='highlight-action'>ace</span> and the <span class='highlight-objective'>Baron</span>, turning the game in Team Liquid's favor."
+    },
+    {
+      "id": "2",
+      "mediaUrl": "https://example.com/game2.gif",
+      "mediaType": "image",
+      "gameData": {
+        "matchId": "LEC-2024-WINTER-2",
+        "teams": {
+          "team1": "G2 Esports",
+          "team2": "Fnatic"
+        },
+        "event": "LEC Winter Split 2024",
+        "players": [
+          {
+            "name": "Caps",
+            "champion": "LeBlanc",
+            "role": "Mid"
+          },
+          {
+            "name": "Rekkles",
+            "champion": "Jinx",
+            "role": "ADC"
+          }
+        ]
+      },
+      "commentary": "<span class='highlight-player'>Caps</span> shows why he's considered one of the best mid laners in the world with this incredible <span class='highlight-champion'>LeBlanc</span> <span class='highlight-action'>outplay</span>. After baiting out Fnatic's key cooldowns, he executes a perfect chain of <span class='highlight-action'>distortions</span> and <span class='highlight-action'>mimics</span>, securing a crucial pick on the enemy jungler."
+    }
+  ]
+} 
