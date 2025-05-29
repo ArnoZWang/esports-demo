@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
 
+# This workflow will build and deploy the site to GitHub Pages
 on:
   push:
     branches:
