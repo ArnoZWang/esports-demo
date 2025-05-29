@@ -20,6 +20,7 @@
     "@mui/material": "^7.1.0",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
+    "qrcode.react": "^4.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }

@@ -1,8 +1,9 @@
-import { Container, CssBaseline, ThemeProvider, createTheme, Select, MenuItem, FormControl, Box, Typography } from '@mui/material';
+import { Container, CssBaseline, ThemeProvider, createTheme, Select, MenuItem, FormControl, Box, Typography, Tooltip } from '@mui/material';
 import { GameHighlight } from './components/GameHighlight';
 import type { GameHighlight as GameHighlightType } from './types/esports';
 import { useState } from 'react';
 import highlightsData from './data/highlights.json';
+import { QRCodeSVG } from 'qrcode.react';
 
 const darkTheme = createTheme({
   palette: {
@@ -193,6 +194,10 @@ function App() {
           textAlign: 'center', 
           mt: 6,
           mb: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2,
           '& a': {
             color: '#00ff9d',
             textDecoration: 'none',
@@ -213,6 +218,32 @@ function App() {
               https://github.com/ArnoZWang/esports-data-to-text
             </a>
           </Typography>
+          <Tooltip title="Scan to visit GitHub repository" arrow>
+            <Box sx={{ 
+              p: 2, 
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              boxShadow: '0 4px 12px rgba(0, 255, 157, 0.2)',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                transform: 'scale(1.05)',
+                boxShadow: '0 6px 16px rgba(0, 255, 157, 0.3)',
+              }
+            }}>
+              <QRCodeSVG 
+                value="https://github.com/ArnoZWang/esports-data-to-text"
+                size={128}
+                level="H"
+                includeMargin={true}
+                imageSettings={{
+                  src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzAwZmY5ZCIgZD0iTTEyIDJDNi40NzcgMiAyIDYuNDc3IDIgMTJzNC40NzcgMTAgMTAgMTAgMTAtNC40NzcgMTAtMTBTMTcuNTIzIDIgMTIgMnptMCAxOGMtNC40MTggMC04LTMuNTgyLTgtOHMzLjU4Mi04IDgtOCA4IDMuNTgyIDggOC0zLjU4MiA4LTggOHoiLz48cGF0aCBmaWxsPSIjMDBmZjlkIiBkPSJNMTIgNmMtMy4zMTQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNiA2LTIuNjg2IDYtNi0yLjY4Ni02LTYtNnptMCAxMGMtMi4yMSAwLTQtMS43OS00LTRzMS43OS00IDQtNCA0IDEuNzkgNCA0LTEuNzkgNC00IDR6Ii8+PC9zdmc+",
+                  height: 24,
+                  width: 24,
+                  excavate: true,
+                }}
+              />
+            </Box>
+          </Tooltip>
         </Box>
       </Container>
     </ThemeProvider>
