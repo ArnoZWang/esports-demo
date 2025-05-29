@@ -9,12 +9,19 @@ export interface GameHighlight {
       team1: string;
       team2: string;
     };
-    event: string;
-    players: {
-      name: string;
-      champion: string;
-      role: string;
-    }[];
+    type: string;
+    timestamp: number;
+    position: {
+      x: number;
+      y: number;
+    };
+    killerId?: number;
+    assistingParticipantIds?: string;
+    teamId: number;
+    buildingType?: string;
+    laneType?: string;
+    towerType?: string;
+    victimId?: number;
   };
   commentary: string;
 } 
