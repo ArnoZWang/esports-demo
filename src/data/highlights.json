@@ -2,9 +2,9 @@
   "highlights": [
     {
       "id": "1",
-      "mediaUrl": "https://www.youtube.com/embed/Eqt7XOrDiTA?start=1515&amp;end=1525",
+      "mediaUrl": "https://github.com/ArnoZWang/esports-demo/raw/refs/heads/main/public/videos/1515_1525__FPX%20vs%20IG%20_%20Semifinal%20Game%204%20_%20World%20Championship%20_%20FunPlus%20Phoenix%20vs%20Invictus%20Gaming%20(2019).mp4",
       "mediaType": "video",
-      "description": "This highlight showcases an intense moment from the LCS Spring Split 2024. Impact on Ornn demonstrates exceptional skill and game sense, making a crucial play that could turn the tide of the match between FPX and iG.",
+      "description": "[Subtitle] Fight everywhere. JackeyLove is just farming for himself. Everyone else rolled their characters on the PvP server. JackeyLove rolled on PvE, killing off minions and towers.",
       "gameData": {
         "matchId": "S9-Semifinal-Game-4",
         "teams": {
@@ -30,28 +30,24 @@
       "id": "2",
       "mediaUrl": "https://example.com/game2.gif",
       "mediaType": "image",
-      "description": "This highlight showcases an intense moment from the LEC Winter Split 2024. Caps on LeBlanc demonstrates exceptional skill and game sense, making a crucial play that could turn the tide of the match between G2 Esports and Fnatic.",
+      "description": "[Subtitle] Sivir speed boost to the Nautilus, Thresh, and look for those two hooks on to G2. G2 had a harder deal but they found a pick at their own. That will be secured by hooks.",
       "gameData": {
-        "matchId": "LEC-2024-WINTER-2",
+        "matchId": "S9-Finals-Game-1",
         "teams": {
-          "team1": "G2 Esports",
-          "team2": "Fnatic"
+          "team1": "FPX",
+          "team2": "G2 Esports"
         },
-        "event": "LEC Winter Split 2024",
-        "players": [
-          {
-            "name": "Caps",
-            "champion": "LeBlanc",
-            "role": "Mid"
-          },
-          {
-            "name": "Rekkles",
-            "champion": "Jinx",
-            "role": "ADC"
-          }
-        ]
+        "type": "CHAMPION_KILL", 
+        "timestamp": 978127, 
+        "position": {
+          "x": 8392,
+          "y": 6899
+        },
+        "killerId": 9,
+        "victimId": 5,
+        "assistingParticipantIds": "8"
       },
-      "commentary": "<span class='highlight-player'>Caps</span> shows why he's considered one of the best mid laners in the world with this incredible <span class='highlight-champion'>LeBlanc</span> <span class='highlight-action'>outplay</span>. After baiting out Fnatic's key cooldowns, he executes a perfect chain of <span class='highlight-action'>distortions</span> and <span class='highlight-action'>mimics</span>, securing a crucial pick on the enemy jungler."
+      "commentary": "… G2's bot lane duo <span class='highlight-action'>collapses</span> onto FPX's <span class='highlight-player'>Crisp</span> (<span class='highlight-champion'>Thresh</span>), securing a <span class='highlight-action'>CHAMPIONKILL</span> with <span class='highlight-player'>Perkz</span> landing the final blow—demonstrating G2’s attempt to claw back control with a well-coordinated pick despite trailing 2–5 in kills."
     }
   ]
 } 
