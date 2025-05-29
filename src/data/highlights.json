@@ -51,7 +51,7 @@
     },
     {
       "id": "3",
-      "mediaUrl": "https://github.com/ArnoZWang/esports-demo/raw/refs/heads/main/public/videos/3890_3900__FPX%20vs%20G2%20_%20Finals%20Game%201%20_%20World%20Championship%20_%20FunPlus%20Phoenix%20vs%20G2%20Esports%20(2019).mp4",
+      "mediaUrl": "https://github.com/ArnoZWang/esports-demo/raw/refs/heads/main/public/videos/1710_1720__FPX%20vs%20G2%20_%20Finals%20Game%203%20_%20World%20Championship%20_%20FunPlus%20Phoenix%20vs%20G2%20Esports%20(2019).mp4",
       "mediaType": "video",
       "description": "[Subtitle] Wanda will not be able to find any follow-up. He is currently the pressure point for G2 plus for TCS on the top lane and as it stands. He needs to find a way to bring G2 back into this game.",
       "gameData": {
@@ -60,17 +60,12 @@
           "team1": "FPX",
           "team2": "G2 Esports"
         },
-        "type": "CHAMPION_KILL", 
-        "timestamp": 978127, 
-        "position": {
-          "x": 8392,
-          "y": 6899
-        },
-        "killerId": 9,
-        "victimId": 5,
-        "assistingParticipantIds": "8"
+        "type": "WARD_KILL", 
+        "timestamp": 531539, 
+        "wardType": "CONTROLWARD",
+        "killerId": 2
       },
-      "commentary": "… G2's bot lane duo <span class='highlight-action'>collapses</span> onto FPX's <span class='highlight-player'>Crisp</span> (<span class='highlight-champion'>Thresh</span>), securing a <span class='highlight-action'>CHAMPIONKILL</span> with <span class='highlight-player'>Perkz</span> landing the final blow—demonstrating G2’s attempt to claw back control with a well-coordinated pick despite trailing 2–5 in kills."
+      "commentary": "… FPX establishes deep <span class='highlight-action'>vision control</span> in G2’s top jungle, with a <span class='highlight-action'>WARDKILL</span> confirming the takedown of a Control Ward—a calculated move as <span class='highlight-player'>Crisp</span> (likely the killer) and the rest of FPX pressure mid, setting up for a <span class='highlight-objective'>potential objective</span> or dive while maintaining their 2K gold lead."
     }
   ]
 } 

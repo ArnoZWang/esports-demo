@@ -11,7 +11,7 @@ export interface GameHighlight {
     };
     type: string;
     timestamp: number;
-    position: {
+    position?: {
       x: number;
       y: number;
     };
@@ -22,6 +22,7 @@ export interface GameHighlight {
     laneType?: string;
     towerType?: string;
     victimId?: number;
+    wardType?: string;
   };
   commentary: string;
 } 
