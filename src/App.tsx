@@ -1,7 +1,7 @@
-import { Container, CssBaseline, ThemeProvider, createTheme, Select, MenuItem, FormControl, InputLabel, Box, Typography } from '@mui/material';
+import { Container, CssBaseline, ThemeProvider, createTheme, Select, MenuItem, FormControl, Box, Typography } from '@mui/material';
 import { GameHighlight } from './components/GameHighlight';
 import type { GameHighlight as GameHighlightType } from './types/esports';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import highlightsData from './data/highlights.json';
 
 const darkTheme = createTheme({
@@ -65,29 +65,6 @@ function App() {
   );
   const [selectedHighlight, setSelectedHighlight] = useState<string>(highlights[0].id);
   const [loading, setLoading] = useState(false);
-
-  // Example of how to fetch data from an API
-  useEffect(() => {
-    const fetchHighlights = async () => {
-      try {
-        setLoading(true);
-        // Replace with your actual API endpoint
-        const response = await fetch('YOUR_API_ENDPOINT');
-        const data = await response.json();
-        setHighlights(data.highlights as GameHighlightType[]);
-        setSelectedHighlight(data.highlights[0].id);
-      } catch (error) {
-        console.error('Error fetching highlights:', error);
-        // Fallback to local data if API fails
-        setHighlights(highlightsData.highlights as GameHighlightType[]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // Uncomment to use API instead of local data
-    // fetchHighlights();
-  }, []);
 
   return (
     <ThemeProvider theme={darkTheme}>
