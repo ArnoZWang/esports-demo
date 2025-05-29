@@ -28,8 +28,8 @@
     },
     {
       "id": "2",
-      "mediaUrl": "https://example.com/game2.gif",
-      "mediaType": "image",
+      "mediaUrl": "https://github.com/ArnoZWang/esports-demo/raw/refs/heads/main/public/videos/3890_3900__FPX%20vs%20G2%20_%20Finals%20Game%201%20_%20World%20Championship%20_%20FunPlus%20Phoenix%20vs%20G2%20Esports%20(2019).mp4",
+      "mediaType": "video",
       "description": "[Subtitle] Sivir speed boost to the Nautilus, Thresh, and look for those two hooks on to G2. G2 had a harder deal but they found a pick at their own. That will be secured by hooks.",
       "gameData": {
         "matchId": "S9-Finals-Game-1",
