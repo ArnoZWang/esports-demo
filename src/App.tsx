@@ -60,11 +60,9 @@ const darkTheme = createTheme({
 });
 
 function App() {
-  const [highlights, setHighlights] = useState<GameHighlightType[]>(
-    highlightsData.highlights as GameHighlightType[]
-  );
+  const highlights = highlightsData.highlights as GameHighlightType[];
   const [selectedHighlight, setSelectedHighlight] = useState<string>(highlights[0].id);
-  const [loading, setLoading] = useState(false);
+  const loading = false;
 
   return (
     <ThemeProvider theme={darkTheme}>
